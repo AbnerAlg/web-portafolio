@@ -1,0 +1,84 @@
+/* ==========================================================================
+   tokens.css
+   Variables de diseño: colores, tipografía, formas y degradados.
+   Para cambiar la marca del portafolio, edita solo este archivo.
+   ========================================================================== */
+
+:root {
+  /* Superficies y texto */
+  --bg: #fbfbfd;
+  --bg-soft: #f1f3f9;
+  --surface: #ffffff;
+  --text: #14151a;
+  --text-soft: #565b6b;
+  --border: rgba(20, 21, 26, 0.1);
+
+  /* Colores de acento */
+  --blue: #1f63ff;
+  --orange: #ff6a2b;
+  --pink: #ff3d80;
+  --mint: #00a884;
+
+  /* Texto sobre tarjetas de color (igual en claro y oscuro) */
+  --on-color: #ffffff;
+
+  /* Ventana de código */
+  --code-bg: #14151a;
+  --code-text: #e9ebf3;
+
+  /* Degradados */
+  --grad-name: linear-gradient(100deg, var(--orange) 10%, var(--pink) 90%);
+  --grad-blue: linear-gradient(140deg, #1f4fff 0%, #2f86ff 100%);
+  --grad-orange: linear-gradient(140deg, #ff5a1f 0%, #ff8a3d 100%);
+  --grad-contact: linear-gradient(135deg, #ff5a1f 0%, #ff3d80 55%, #ff8a3d 100%);
+
+  /* Tipografía */
+  --font-sans: "Figtree", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-code: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
+
+  /* Formas y medidas */
+  --radius: 22px;
+  --radius-lg: 32px;
+  --radius-pill: 999px;
+  --gutter: 1.25rem;
+  --max-width: 68rem;
+
+  /* Movimiento */
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+  color-scheme: light;
+}
+
+/* Tema oscuro automático (según el sistema), salvo que el usuario elija claro */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0a0b10;
+    --bg-soft: #10121a;
+    --surface: #151824;
+    --text: #f2f3f7;
+    --text-soft: #a3a8b9;
+    --border: rgba(255, 255, 255, 0.11);
+    --blue: #5b93ff;
+    --orange: #ff7d44;
+    --pink: #ff5c97;
+    --mint: #2ee6b6;
+    --code-bg: #0e1018;
+    color-scheme: dark;
+  }
+}
+
+/* Tema oscuro elegido con el botón */
+:root[data-theme="dark"] {
+  --bg: #0a0b10;
+  --bg-soft: #10121a;
+  --surface: #151824;
+  --text: #f2f3f7;
+  --text-soft: #a3a8b9;
+  --border: rgba(255, 255, 255, 0.11);
+  --blue: #5b93ff;
+  --orange: #ff7d44;
+  --pink: #ff5c97;
+  --mint: #2ee6b6;
+  --code-bg: #0e1018;
+  color-scheme: dark;
+}

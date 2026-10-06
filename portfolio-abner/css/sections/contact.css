@@ -1,0 +1,62 @@
+/* ==========================================================================
+   sections/contact.css
+   Bloque de contacto y pie de página.
+   ========================================================================== */
+
+.contact {
+  margin-block: 2rem 4rem;
+  padding: clamp(2rem, 6vw, 4rem);
+  border-radius: var(--radius-lg);
+  background: var(--grad-contact);
+  color: var(--on-color);
+}
+
+.contact__title {
+  max-width: 14ch;
+  margin-top: 0.75rem;
+  font-size: clamp(2.2rem, 6.5vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+}
+
+.contact__text {
+  max-width: 34rem;
+  margin-top: 1rem;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.contact__mail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
+.contact__address {
+  padding: 0.7rem 1.1rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: clamp(1rem, 2.8vw, 1.15rem);
+  font-weight: 700;
+  overflow-wrap: anywhere;
+  user-select: all;
+}
+
+.contact__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 2rem;
+  padding-block: 2rem 3rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-soft);
+  font-size: 0.92rem;
+}

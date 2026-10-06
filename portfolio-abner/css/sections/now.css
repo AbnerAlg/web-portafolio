@@ -1,0 +1,101 @@
+/* ==========================================================================
+   sections/now.css
+   "En qué estoy": lista de estudio, ruta de aprendizaje e idiomas.
+   ========================================================================== */
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.skill-grid__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.9rem 1rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.skill-grid__name {
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.skill-grid__note {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+/* Ruta de estudio */
+.roadmap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+.roadmap__step {
+  display: grid;
+  grid-template-columns: 5.25rem minmax(0, 1fr);
+  gap: 0.85rem;
+  align-items: start;
+}
+
+.roadmap__stage {
+  --accent: var(--blue);
+  margin-top: 0.1rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.roadmap__step:nth-child(2) .roadmap__stage { --accent: var(--orange); }
+.roadmap__step:nth-child(3) .roadmap__stage { --accent: var(--mint); }
+
+/* Idiomas */
+.level {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.level__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-weight: 600;
+}
+
+.level__value {
+  color: var(--text-soft);
+  font-weight: 500;
+}
+
+.level__bar {
+  display: block;
+  height: 0.5rem;
+  overflow: hidden;
+  border-radius: var(--radius-pill);
+  background: var(--bg-soft);
+}
+
+.level__bar i {
+  display: block;
+  width: var(--value);
+  height: 100%;
+  background: var(--accent);
+}
+
+@media (max-width: 560px) {
+  .skill-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

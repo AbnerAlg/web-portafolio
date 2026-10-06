@@ -1,0 +1,64 @@
+/* ==========================================================================
+   sections/stack.css
+   Tecnologías agrupadas en cuatro tarjetas del mismo tamaño (2 × 2).
+   ========================================================================== */
+
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.stack-group {
+  min-width: 0;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.stack-group__title {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.stack-group__title::before {
+  content: "";
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.stack-group--orange { --accent: var(--orange); }
+.stack-group--blue { --accent: var(--blue); }
+.stack-group--pink { --accent: var(--pink); }
+.stack-group--mint { --accent: var(--mint); }
+
+.stack-legend {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+  color: var(--text-soft);
+  font-size: 0.92rem;
+}
+
+.stack-legend__sample {
+  display: inline-block;
+  width: 1.6rem;
+  height: 1rem;
+  border: 1.5px dashed var(--text-soft);
+  border-radius: var(--radius-pill);
+}
+
+@media (max-width: 640px) {
+  .stack-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

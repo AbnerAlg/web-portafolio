@@ -1,0 +1,65 @@
+/* ==========================================================================
+   layout.css
+   Estructura de página: contenedor, secciones y cuadrículas.
+   ========================================================================== */
+
+.container {
+  width: min(100%, var(--max-width));
+  margin-inline: auto;
+}
+
+/* ---------- Sección genérica ---------- */
+
+.section {
+  padding-block: 4.5rem;
+}
+
+.section__head {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 40rem;
+  margin-bottom: 2.25rem;
+}
+
+.section__eyebrow {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--orange);
+}
+
+.section__eyebrow--light {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.section__title {
+  font-size: clamp(2rem, 5.5vw, 3.25rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.section__text {
+  color: var(--text-soft);
+}
+
+/* ---------- Cuadrícula bento (6 columnas) ---------- */
+
+.bento {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.span-4 { grid-column: span 4; }
+.span-3 { grid-column: span 3; }
+.span-2 { grid-column: span 2; }
+
+@media (max-width: 860px) {
+  .span-4,
+  .span-3 { grid-column: span 6; }
+  .span-2 { grid-column: span 3; }
+}
+
+@media (max-width: 560px) {
+  .span-2 { grid-column: span 6; }
+}

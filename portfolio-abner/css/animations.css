@@ -1,0 +1,46 @@
+/* ==========================================================================
+   animations.css
+   Animaciones y reglas de movimiento reducido.
+   El contenido siempre es visible: solo se desplaza un poco al aparecer.
+   ========================================================================== */
+
+@keyframes ping {
+  70% { box-shadow: 0 0 0 0.55rem transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.badge__dot {
+  box-shadow: 0 0 0 0 color-mix(in srgb, var(--mint) 60%, transparent);
+}
+
+/* Aparición al hacer scroll (js/reveal.js agrega .is-visible) */
+.reveal {
+  transform: translateY(26px);
+  transition: transform 0.7s var(--ease-out);
+}
+
+.reveal.is-visible {
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  .reveal {
+    transform: none;
+    transition: none;
+  }
+
+  .badge__dot,
+  .code-window__cursor {
+    animation: none;
+  }
+
+  .rotator__word {
+    transition: none;
+  }
+}

@@ -1,0 +1,101 @@
+/* ==========================================================================
+   sections/experience.css
+   Línea de tiempo de experiencia y cifras destacadas.
+   ========================================================================== */
+
+.timeline__item {
+  display: grid;
+  grid-template-columns: 10rem minmax(0, 1fr);
+  gap: 2rem;
+  padding-block: 1.75rem;
+  border-top: 1px solid var(--border);
+}
+
+.timeline__item:last-child {
+  border-bottom: 1px solid var(--border);
+}
+
+.timeline__when {
+  padding-top: 0.3rem;
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.timeline__dates {
+  display: block;
+  color: var(--orange);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.timeline__role {
+  font-size: 1.45rem;
+  font-weight: 800;
+}
+
+.timeline__org {
+  margin-top: 0.25rem;
+  color: var(--text-soft);
+  font-weight: 600;
+}
+
+.timeline__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding-left: 1.15rem;
+  list-style: disc;
+  color: var(--text-soft);
+}
+
+.timeline__list li::marker {
+  color: var(--orange);
+}
+
+/* Cifras */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.stat {
+  padding: 1.4rem 1.5rem;
+  border-radius: var(--radius);
+  background: var(--bg-soft);
+}
+
+.stat__value {
+  display: block;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat:nth-child(1) .stat__value { color: var(--orange); }
+.stat:nth-child(2) .stat__value { color: var(--blue); }
+.stat:nth-child(3) .stat__value { color: var(--mint); }
+
+.stat__label {
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--text-soft);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 720px) {
+  .timeline__item {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.5rem;
+  }
+
+  .stats {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

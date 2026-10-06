@@ -1,0 +1,41 @@
+/* ==========================================================================
+   sections/education.css
+   Licenciatura y certificaciones.
+   ========================================================================== */
+
+.education {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  gap: 1rem;
+}
+
+.education .card__title {
+  font-size: 1.25rem;
+}
+
+.cert-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.cert-list__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  padding-block: 0.8rem;
+  border-top: 1px solid var(--border);
+}
+
+.cert-list__item:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.cert-list__name {
+  font-weight: 700;
+}
+
+.cert-list__meta {
+  color: var(--text-soft);
+  font-size: 0.92rem;
+}
